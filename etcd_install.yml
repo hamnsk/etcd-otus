@@ -1,0 +1,7 @@
+- name: Setup etcd
+  hosts: etcd-master
+  vars:
+    etcd_secure: True
+  roles:
+    - etcd
+    - etcd-cluster

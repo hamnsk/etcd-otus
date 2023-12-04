@@ -1,0 +1,12 @@
+[Unit]
+Description=Run etcdctl defrag
+Documentation=https://etcd.io/docs/v3.5/op-guide/maintenance/#defragmentation
+After=network.target
+[Service]
+Type=oneshot
+User={{etcd_user}}
+Environment="LOG_DIR=/var/log"
+Environment="ETCDCTL_API=3"
+ExecStart={{etcd_install_dir}}/etcdctl defrag
+[Install]
+WantedBy=multi-user.target

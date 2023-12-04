@@ -1,0 +1,13 @@
+[etcd-master]
+d00etcd0001
+d00etcd0002
+d00etcd0003
+
+
+[all:vars]
+ansible_ssh_user="ansible"
+dns_domain="k11s.cloud.vsk.local"
+country_name="RU"
+organization_name="KarbidSoft"
+email_address="admin@karbidsoft.ru"
+common_name="KarbidSoft Root CA"
